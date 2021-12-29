@@ -7,4 +7,15 @@ IProvenanceHash hasher = new ProvenanceHash();
 
 var hash = hasher.GenerateHash(args[0]);
 
+Console.WriteLine("ProvenanceHash is:");
+Console.WriteLine(hash.ProvHash);
+Console.WriteLine("--------------------------------------------------------------");
+Console.WriteLine("Concated Hash is:");
+Console.WriteLine(hash.ConcateHash);
+
+Directory.CreateDirectory("Output");
+File.WriteAllText("Output/ProvHash.txt", hash.ProvHash);
+File.WriteAllText("Output/ConcatHash.txt", hash.ConcateHash);
+File.WriteAllLines("Output/Hashes.txt", hash.FileHashes.Select(f => $"{f.Key}\t\t{f.Value}"));
+
 Console.ReadLine();
