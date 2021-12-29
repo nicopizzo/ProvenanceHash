@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "ProvHash.Console": {
-      "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\ieatb\\source\\repos\\chester-nft\\asset_metadata\\minted\""
-    }
-  }
-}
